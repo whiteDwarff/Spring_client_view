@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-size: 10px;
+    }
+
+    /* header */
+    #header-wrap {
+      /* width: 70%; */
+      margin: 0 auto;
+      font-size: 1.2rem;
+    }
+
+    #header-logo-box {
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      line-height: 80px;
+      padding: 0 2rem;
+    }
+
+    #header-logo-box>h1>a {
+      color: #000;
+      font-size: 1.2rem;
+    }
+
+    #header-profile {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin: auto 0;
+      background-color: #f0f;
+    }
+
+    #nav>nav {
+      padding: 1rem 2rem;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+
+    #nav>nav a {
+      margin-right: 3rem;
+      color: #000;
+    }
+
+    #main-img {
+      height: 200px;
+      background-color: #0f0;
+    }
+
+    /* aside */
+    aside {
+      width: 20%;
+      background-color: #f0f;
+    }
+
+    .card {
+      /* padding: 1rem 0; */
+      font-size: 0.8rem;
+    }
+
+    .aside-title {
+      padding: .7rem 0;
+      border-top: 2px solid #606060;
+      border-bottom: 2px solid #606060;
+    }
+
+    .aside-content {
+      margin-bottom: 0.2rem;
+    }
+
+    #post-section {
+      width: 77%;
+      margin-left: 3%;
+      /* background-color: #ff0; */
+    }
+
+    .post-wrap {
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .post-box {
+      width: 49%;
+    }
+
+    .post-box-title {
+      padding: 0.4rem 0;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #000;
+    }
+
+    .post-box:nth-child(2n) {
+      margin-left: 2%;
+    }
+
+    .post-box-wrap {
+      flex-wrap: wrap;
+    }
+
+    .post-box-content {
+      width: 32%;
+    }
+
+    .post-box-content-img {
+      width: 100%;
+      height: 146.02px;
+      background-color: #ccc;
+    }
+
+    .post-box-wrap>.post-box-content:nth-child(2),
+    .post-box-wrap>.post-box-content:nth-child(5),
+    .post-box-wrap>.post-box-content:nth-child(8) {
+      margin: 0 2%;
+    }
+
+    .post-box-content-content {
+      margin: 0.2rem 0;
+    }
+
+    /* 공통 클레스 */
+    .wrap {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    /* align */
+    .flex {
+      display: flex;
+    }
+
+    .between {
+      justify-content: space-between;
+    }
+
+    .around {
+      justify-content: space-around;
+    }
+
+    .center {
+      justify-content: center;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .inline {
+      display: inline;
+    }
+
+    /* text */
+    .bold {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- header -->
+    <header>
+      <div id="header-wrap">
+        <article id="header-logo-box">
+          <h1><a href="#">Logo</a></h1>
+          <!-- 사용자가 로그인 상태인 경우 프로필 이미지  -->
+          <div id="header-profile"></div>
+          <!-- 사용자가 로그인 상태가 아닌 경우 LOGIN 버튼  -->
+          <!-- <a href="#">LOGIN</a> -->
+        </article>
+        <article id="nav">
+          <nav>
+            <a href="#">HOME</a>
+            <a href="#">ADD</a>
+            <a href="#">INFO</a>
+          </nav>
+        </article>
+      </div>
+    </header>
+
+    <section id="main">
+      <div id="main-wrap" class="flex">
+
+        <!-- side 메뉴 -->
+        <aside>
+          <div class="card">
+            <span class="aside-title bold block">TITLE1</span>
+            <li class="aside-content">
+              <a href="#">content</a>
+            </li>
+            <li class="aside-content">
+              <a href="#">content</a>
+            </li>
+            <li class="aside-content">
+              <a href="#">content</a>
+            </li>
+          </div>
+          <div class="card">
+            <span class="aside-title bold block">TITLE2</span>
+            <li class="aside-content">
+              <a href="#">content</a>
+            </li>
+            <li class="aside-content">
+              <a href="#">content</a>
+            </li>
+            <li class="aside-content">
+              <a href="#">content</a>
+            </li>
+
+          </div>
+        </aside>
+        <!-- 게시글 화면 -->
+        <section id="post-section">
+
+          <!-- 메인 배너 -->
+          <div id="main-img"></div>
+
+          <article class="post-wrap flex between">
+            <!-- 하나의 포스트 영역 -->
+            <div class="post-box">
+              <div class="post-box-title flex between">
+                <h4><a href="#">카테고리명</a></h4>
+                <a href="#">더보기</a>
+              </div>
+              <!-- 게시글을 감싸는 부모 클레스  -->
+              <div class="post-box-wrap flex">
+                <!-- 하나의 게시글 -->
+                <a href="#" class="post-box-content">
+                  <div class="post-box-content-img"></div>
+                  <span class="post-box-content-title block bold">TITLE</span>
+                  <span class="post-box-content-content block">nickname</span>
+                  <div class="post-box-content-ohter flex">
+                    <span class="post-box-content-date">15:31</span>
+                    <span class="post-box-content-hit">조회 30</span>
+                  </div>
+                </a>
+                <a href="#" class="div post-box-content">
+                  <div class="post-box-content-img"></div>
+                  <span class="post-box-content-title block bold">TITLE</span>
+                  <span class="post-box-content-content block">nickname</span>
+                  <div class="post-box-content-ohter">
+                    <span class="post-box-content-date">15:31</span>
+                    <span class="post-box-content-hit">조회 30</span>
+                  </div>
+                </a>
+                <a href="#" class="div post-box-content">
+                  <div class="post-box-content-img"></div>
+                  <span class="post-box-content-title block bold">TITLE</span>
+                  <span class="post-box-content-content block">nickname</span>
+                  <div class="post-box-content-ohter">
+                    <span class="post-box-content-date">15:31</span>
+                    <span class="post-box-content-hit">조회 30</span>
+                  </div>
+                </a>
+                <a href="#" class="post-box-content">
+                  <div class="post-box-content-img"></div>
+                  <span class="post-box-content-title block bold">TITLE</span>
+                  <span class="post-box-content-content block">nickname</span>
+                  <div class="post-box-content-ohter">
+                    <span class="post-box-content-date">15:31</span>
+                    <span class="post-box-content-hit">조회 30</span>
+                  </div>
+                </a>
+                <a href="#" class="div post-box-content">
+                  <div class="post-box-content-img"></div>
+                  <span class="post-box-content-title block bold">TITLE</span>
+                  <span class="post-box-content-content block">nickname</span>
+                  <div class="post-box-content-ohter">
+                    <span class="post-box-content-date">15:31</span>
+                    <span class="post-box-content-hit">조회 30</span>
+                  </div>
+                </a>
+                <a href="#" class="div post-box-content">
+                  <div class="post-box-content-img"></div>
+                  <span class="post-box-content-title block bold">TITLE</span>
+                  <span class="post-box-content-content block">nickname</span>
+                  <div class="post-box-content-ohter">
+                    <span class="post-box-content-date">15:31</span>
+                    <span class="post-box-content-hit">조회 30</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <!-- 하나의 포스트 영역 -->
+            <div class="post-box">
+              <div class="post-box-title flex between">
+                <h4><a href="#">카테고리명</a></h4>
+                <a href="#">더보기</a>
+              </div>
+              <!-- 게시글을 감싸는 부모 클레스  -->
+              <div class="post-box-wrap flex">
+                <!-- 하나의 게시글 -->
+                <a href="#" class="post-box-content">
+                  <div class="post-box-content-img"></div>
+                  <span class="post-box-content-title block bold">TITLE</span>
+                  <span class="post-box-content-content block">nickname</span>
+                  <div class="post-box-content-ohter flex">
+                    <span class="post-box-content-date">15:31</span>
+                    <span class="post-box-content-hit">조회 30</span>
+                  </div>
+                </a>
+                <a href="#" class="div post-box-content">
+                  <div class="post-box-content-img"></div>
+                  <span class="post-box-content-title block bold">TITLE</span>
+                  <span class="post-box-content-content block">nickname</span>
+                  <div class="post-box-content-ohter">
+                    <span class="post-box-content-date">15:31</span>
+                    <span class="post-box-content-hit">조회 30</span>
+                  </div>
+                </a>
+                <a href="#" class="div post-box-content">
+                  <div class="post-box-content-img"></div>
+                  <span class="post-box-content-title block bold">TITLE</span>
+                  <span class="post-box-content-content block">nickname</span>
+                  <div class="post-box-content-ohter">
+                    <span class="post-box-content-date">15:31</span>
+                    <span class="post-box-content-hit">조회 30</span>
+                  </div>
+                </a>
+                <a href="#" class="post-box-content">
+                  <div class="post-box-content-img"></div>
+                  <span class="post-box-content-title block bold">TITLE</span>
+                  <span class="post-box-content-content block">nickname</span>
+                  <div class="post-box-content-ohter">
+                    <span class="post-box-content-date">15:31</span>
+                    <span class="post-box-content-hit">조회 30</span>
+                  </div>
+                </a>
+                <a href="#" class="div post-box-content">
+                  <div class="post-box-content-img"></div>
+                  <span class="post-box-content-title block bold">TITLE</span>
+                  <span class="post-box-content-content block">nickname</span>
+                  <div class="post-box-content-ohter">
+                    <span class="post-box-content-date">15:31</span>
+                    <span class="post-box-content-hit">조회 30</span>
+                  </div>
+                </a>
+                <a href="#" class="div post-box-content">
+                  <div class="post-box-content-img"></div>
+                  <span class="post-box-content-title block bold">TITLE</span>
+                  <span class="post-box-content-content block">nickname</span>
+                  <div class="post-box-content-ohter">
+                    <span class="post-box-content-date">15:31</span>
+                    <span class="post-box-content-hit">조회 30</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
+
+  </div>
+</body>
+
+</html>
