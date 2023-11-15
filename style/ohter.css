@@ -1,7 +1,23 @@
   /* 공통 클레스 */
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* font-family: 'Apple SD Gothic Neo','Malgun Gothic',arial,sans-serif !important; */
+    font-size: 1.3rem;
+  }
+  html {
+    font-size: 10px;
+  }
   .wrap {
     width: 70%;
     margin: 0 auto;
+  }
+  .post-section {
+    width: 77%;
+    margin-left: 3%;
   }
 
   /* align */
@@ -28,13 +44,21 @@
   .inline {
     display: inline;
   }
-
+  .inline-bolok {
+    display: inline-block
+  }
+  .align-center {
+    align-items: center;
+  }
   /* text */
   .bold {
     font-weight: bold;
   }
   .text-center {
     text-align: center;
+  }
+  .text-left {
+    text-align: left;
   }
   .x-auto {
     margin: 0 auto;
@@ -44,4 +68,35 @@
   }
   .decoration {
     text-decoration: underline;
+  }
+  .color-666 {
+    color: #666;
+  }
+  .color-fff {
+    color: #fff;
+  }
+  .font-size {
+    font-size: 0.8rem;
+  }
+  .font-size-h3 {
+    font-size: 1.2rem;
+  }
+
+
+  /* cursor */
+  .pointer {
+    cursor: pointer;
+  }
+
+
+  /* border */
+  .border-ccc {
+    border: 1px solid #ccc;
+  }
+
+
+  /*  */
+  .page-title {
+    margin: 1rem 0;
+    font-size: 1.5rem;
   }

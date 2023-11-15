@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- ##### SUMMER NOTE ##### -->
+  <script src="https://kit.fontawesome.com/08a7424104.js" crossorigin="anonymous"></script>
+  <!--  jQuery, bootstrap -->
+  <!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet"> -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js?after"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+  <!-- summernote css/js-->
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+  <link rel="stylesheet" href="/style/ohter.css">
+  <link rel="stylesheet" href="/style/header.css">
+  <link rel="stylesheet" href="/style/aside.css">
+  <style>
+    form {
+      border-top: 1px solid #000;
+      padding-top: 2rem;
+    }
+    select,
+    input,
+    textarea,
+    button {
+      padding: 0.5rem 1rem;
+      outline: none;
+    }
+
+    #post-category {
+      width: 65%;
+      margin-right: 5%;
+    }
+
+    #post-header {
+      width: 30%;
+    }
+
+    #post-title {
+      width: 100%;
+      margin: 1rem 0;
+    }
+
+    #post-contents {
+      width: 100%;
+      margin: 1rem 0;
+      resize: none;
+    }
+
+    #warnning,
+    #submit-box {
+      padding: 1rem;
+    }
+
+    #submit-box>div * {
+      margin: 0;
+      cursor: pointer;
+    }
+
+    #submit-box>div input {
+      margin-right: 0.4rem;
+    }
+    #submit-box>div label {
+      margin-right: 1rem;
+    }
+
+    #submit-btn {
+      padding: .5rem 2rem;;
+      background-color: #c1f3d7;
+      border: 2px solid #c1f3d7;
+      border-radius: 5px;
+      color: #03c75a;
+    }
+    html {
+      font-size: 10px !important;
+    }
+    a {
+      text-decoration: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- header -->
+    <header>
+      <div id="header-wrap">
+        <article id="header-logo-box">
+          <h1><a href="#">Logo</a></h1>
+          <!-- 로그인 상태가 아닌 경우 -->
+          <div>
+            <a href="#" id="login-btn">LOGIN</a>
+            <a href="#" id="join-btn">JOIN</a>
+          </div>
+        </article>
+        <article id="nav">
+          <nav>
+            <a href="#">HOME</a>
+            <a href="#">ADD</a>
+            <a href="#">INFO</a>
+          </nav>
+        </article>
+      </div>
+    </header>
+
+    <section id="main">
+      <div id="main-wrap" class="flex">
+
+        <!-- side 메뉴 -->
+        <aside>
+          <!-- 로그인 상태인 경우 사용자의 프로필 -->
+          <div id="profile">
+            <div>
+              <div id="profile-info" class="flex">
+                <div id="header-profile"></div>
+                <div class="y-auto">
+                  <h4>nickname</h4>
+                  <span>2022.02.06</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <li class="profile-card flex between">
+                <span class="profile-title">방문</span>
+                <span class="profile-content">10회</span>
+              </li>
+              <li class="profile-card flex between">
+                <span class="profile-title">내가쓴 게시글</span>
+                <span class="profile-content">3개</span>
+              </li>
+              <li class="profile-card flex between">
+                <span class="profile-title">내가 쓴 댓글</span>
+                <span class="profile-content">82개</span>
+              </li>
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="aside-title bold block">Category1</span>
+            <li class="aside-content">
+              <a href="#">sub-category</a>
+            </li>
+            <li class="aside-content">
+              <a href="#">sub-category</a>
+            </li>
+            <li class="aside-content">
+              <a href="#">sub-category</a>
+            </li>
+          </div>
+          <div class="card">
+            <span class="aside-title bold block">Category2</span>
+            <li class="aside-content">
+              <a href="#">sub-category</a>
+            </li>
+            <li class="aside-content">
+              <a href="#">sub-category</a>
+            </li>
+            <li class="aside-content">
+              <a href="#">sub-category</a>
+            </li>
+
+          </div>
+        </aside>
+
+        <!-- 글쓰기 폼 -->
+        <section class="post-section">
+          <h3 class="page-title bold">글쓰기</h3>
+          <form action="">
+            <div class="flex">
+              <select name="category" id="post-category" class="pointer border-ccc">
+                <option value="" selected>category1</option>
+                <option value="">category2</option>
+                <option value="">category3</option>
+              </select>
+              <!-- 관리자의 공지사항 작성이 아닌 경우 비활성화 -->
+              <select name="category" id="post-header" class="pointer border-ccc" disabled>
+                <option value="" selected disabled>말머리선택</option>
+                <option value="">option1</option>
+                <option value="">option2</option>
+              </select>
+            </div>
+            <!-- 타이틀 작성 -->
+            <input type="text" name="title" id="post-title" class="block border-ccc" placeholder="제목을 입력하세요.">
+            <p id="warnning" class="border-ccc">
+              * 정치, 주식, 코인, 개인 SNS 관련 게시물 작성 불가합니다. <br>
+              * 지속적으로 동일한 내용의 질문은 삼가해주세요. <br>
+              * 타인에 대한 배려를 해주세요. <br>
+              * 답변에 대한 대댓글은 감사를 표현하는 또 하나의 방법입니다.
+            </p>
+            <!-- 내용 작성 -->
+            <textarea name="contents" id="post-contents" class="border-ccc block" rows="20"
+              placeholder="내용을 입력하세요."></textarea>
+
+            <div id="submit-box" class="flex between border-ccc">
+              <div class="flex align-center">
+                <input type="checkbox" checked id="public-setting">
+                <label for="public-setting" class="block">공개 설정</label>
+                <input type="checkbox" checked id="allow-comments">
+                <label for="allow-comments">댓글 허용</label>
+              </div>
+              <button id="submit-btn" class="block bold pointer">등록</button>
+            </div>
+          </form>
+        </section>
+
+      </div>
+</body>
+
+</html>

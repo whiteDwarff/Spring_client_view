@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="/style/ohter.css">
+  <link rel="stylesheet" href="/style/header.css">
+  <link rel="stylesheet" href="/style/aside.css">
+  <link rel="stylesheet" href="/style/post.css">
+  <script src="https://kit.fontawesome.com/08a7424104.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -90,8 +95,64 @@
           </div>
         </aside>
         <!-- 게시글 화면 -->
-        <section id="post-section">
-          
+        <section class="post-section">
+          <article id="post-content">
+            <h3 class="page-title">Category Name</h3>
+            <table class="text-center font-size">
+              <thead>
+                <tr>
+                  <th class="post-title text-">제목</th>
+                  <th class="post-writer">작성자</th>
+                  <th class="post-date">작성일</th>
+                  <th class="post-hit">조회</th>
+                  <th class="post-like">좋아요</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- 공지사항인 경우 post-notice, post-notice-title 클래스 추가 -->
+                <tr class="post-notice">
+                  <td class="text-left">
+                    <a href="#" class="post-title post-notice-title bold">
+                      <span class="post-count inline-bolok text-center">[공지]</span>
+                      <span>11월, 다시 없을 역대급 블프가 온다!!</span>
+                      <span>[142]</span>
+                    </a>
+                  </td>
+                  <td class="post-writer">관리자</td>
+                  <td class="post-date">2022.11.14</td>
+                  <td class="post-hit">3,520</td>
+                  <td class="post-like">32</td>
+                </tr>
+                <!-- 일반 게시물 -->
+                <tr>
+                  <td class="text-left">
+                    <a href="#" class="post-title color-666">
+                      <span class="post-count inline-bolok text-center">1</span>
+                      <span>역대급 머리 손질법</span>
+                      <span>[2]</span>
+                    </a>
+                  </td>
+                  <td class="post-writer">강문호</td>
+                  <td class="post-date">2022.11.16</td>
+                  <td class="post-hit">3</td>
+                  <td class="post-like">1</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article id="post-seach" class="text-center">
+            <!-- 카테고리 내용 검색 폼  -->
+            <form action="" id="post-search-form" class="">
+              <select name="" id="select-box block" class="pointer">
+                <option value="post">게시글</option>
+                <option value="comment">댓글</option>
+                <option value="writer">작성자</option>
+              </select>
+              <input type="text" id="post-search-content" placeholder="내용을 입력해주세요.">
+              <button id="post-search-btn" class="pointer color-fff">검색</button>
+            </form>
+          </article>
         </section>
 
       </div>

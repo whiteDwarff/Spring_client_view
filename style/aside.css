@@ -40,7 +40,8 @@
   }
 
   .aside-content {
-    margin-bottom: 0.2rem;
+    /* margin-bottom: 0.2rem; */
+    margin: 0.3rem 0;
   }
   .aside-content a {
     color: #000;
