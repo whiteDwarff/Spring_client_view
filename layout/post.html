@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- header -->
+    <header>
+      <div id="header-wrap">
+        <article id="header-logo-box">
+          <h1><a href="#">Logo</a></h1>
+          <!-- 로그인 상태가 아닌 경우 -->
+          <div>
+            <a href="#" id="login-btn">LOGIN</a>
+            <a href="#" id="join-btn">JOIN</a>
+          </div>
+        </article>
+        <article id="nav">
+          <nav>
+            <a href="#">HOME</a>
+            <a href="#">ADD</a>
+            <a href="#">INFO</a>
+          </nav>
+        </article>
+      </div>
+    </header>
+
+    <section id="main">
+      <div id="main-wrap" class="flex">
+
+        <!-- side 메뉴 -->
+        <aside>
+          <!-- 로그인 상태인 경우 사용자의 프로필 -->
+          <div id="profile">
+            <div>
+              <div id="profile-info" class="flex">
+                <div id="header-profile"></div>
+                <div class="y-auto">
+                  <h4>nickname</h4>
+                  <span>2022.02.06</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <li class="profile-card flex between">
+                <span class="profile-title">방문</span>
+                <span class="profile-content">10회</span>
+              </li>
+              <li class="profile-card flex between">
+                <span class="profile-title">내가쓴 게시글</span>
+                <span class="profile-content">3개</span>
+              </li>
+              <li class="profile-card flex between">
+                <span class="profile-title">내가 쓴 댓글</span>
+                <span class="profile-content">82개</span>
+              </li>
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="aside-title bold block">Category1</span>
+            <li class="aside-content">
+              <a href="#">sub-category</a>
+            </li>
+            <li class="aside-content">
+              <a href="#">sub-category</a>
+            </li>
+            <li class="aside-content">
+              <a href="#">sub-category</a>
+            </li>
+          </div>
+          <div class="card">
+            <span class="aside-title bold block">Category2</span>
+            <li class="aside-content">
+              <a href="#">sub-category</a>
+            </li>
+            <li class="aside-content">
+              <a href="#">sub-category</a>
+            </li>
+            <li class="aside-content">
+              <a href="#">sub-category</a>
+            </li>
+
+          </div>
+        </aside>
+        <!-- 게시글 화면 -->
+        <section id="post-section">
+          
+        </section>
+
+      </div>
+</body>
+
+</html>

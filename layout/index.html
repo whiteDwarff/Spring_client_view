@@ -37,7 +37,18 @@
       color: #000;
       font-size: 1.2rem;
     }
+    #login-btn,
+    #join-btn {
+      color: #000;
+      border: 1px solid #000;
+      border-radius: 30px;
+      padding: 0.7rem 2.3rem;
+    }
 
+    #join-btn {
+      color: #fff;
+      background-color: #000;
+    }
     #header-profile {
       width: 40px;
       height: 40px;
@@ -213,6 +224,9 @@
     .y-auto {
       margin: auto 0;
     }
+    .decoration {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -224,10 +238,11 @@
       <div id="header-wrap">
         <article id="header-logo-box">
           <h1><a href="#">Logo</a></h1>
-          <!-- 사용자가 로그인 상태인 경우 프로필 이미지  -->
-        
-          <!-- 사용자가 로그인 상태가 아닌 경우 LOGIN 버튼  -->
-          <!-- <a href="#">LOGIN</a> -->
+          <!-- 로그인 상태가 아닌 경우 -->
+          <div>
+            <a href="#" id="login-btn">LOGIN</a>
+            <a href="#" id="join-btn">JOIN</a>
+          </div>
         </article>
         <article id="nav">
           <nav>
@@ -244,6 +259,7 @@
 
         <!-- side 메뉴 -->
         <aside>
+          <!-- 로그인 상태인 경우 사용자의 프로필 -->
           <div id="profile">
             <div>
               <div id="profile-info" class="flex">

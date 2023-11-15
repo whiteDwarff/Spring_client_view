@@ -1,0 +1,47 @@
+  /* 공통 클레스 */
+  .wrap {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  /* align */
+  .flex {
+    display: flex;
+  }
+
+  .between {
+    justify-content: space-between;
+  }
+
+  .around {
+    justify-content: space-around;
+  }
+
+  .center {
+    justify-content: center;
+  }
+
+  .block {
+    display: block;
+  }
+
+  .inline {
+    display: inline;
+  }
+
+  /* text */
+  .bold {
+    font-weight: bold;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .x-auto {
+    margin: 0 auto;
+  }
+  .y-auto {
+    margin: auto 0;
+  }
+  .decoration {
+    text-decoration: underline;
+  }
