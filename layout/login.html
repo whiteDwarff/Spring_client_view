@@ -349,8 +349,8 @@ body {
         <h1><a href="./index.html">Logo</a></h1>
         <!-- 로그인 상태가 아닌 경우 -->
         <div>
-          <a href="#" id="login-btn">LOGIN</a>
-          <a href="#" id="join-btn">JOIN</a>
+          <a href="./login.html?login" id="login-btn">LOGIN</a>
+          <a href="./login.html?join" id="join-btn">JOIN</a>
         </div>
       </article>
       <article id="nav">
@@ -363,8 +363,10 @@ body {
     </div>
   </header>
 
+  <!-- 파라미터 값에 따라 classList 넣어주-->
   <div id="container" class="container">
     <!-- FORM SECTION -->
+    <!-- 회원가입 -->
     <div class="row">
       <!-- SIGN UP -->
       <div class="col align-items-center flex-col sign-up">
@@ -403,6 +405,7 @@ body {
       </div>
       <!-- END SIGN UP -->
       <!-- SIGN IN -->
+      <!-- 로그인 -->
       <div class="col align-items-center flex-col sign-in">
         <div class="form-wrapper align-items-center">
           <div class="form sign-in">
@@ -435,6 +438,7 @@ body {
       <!-- END SIGN IN -->
     </div>
     <!-- END FORM SECTION -->
+
     <!-- CONTENT SECTION -->
     <div class="row content-row">
       <!-- SIGN IN CONTENT -->
@@ -443,7 +447,6 @@ body {
           <h2>
             Welcome
           </h2>
-  
         </div>
         <div class="img sign-in">
     

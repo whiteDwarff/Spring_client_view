@@ -46,9 +46,11 @@ form {
   border-radius: 5px;
   color: #03c75a;
 }
+
 html {
   font-size: 10px !important;
 }
+
 a {
   text-decoration: none !important;
 }
