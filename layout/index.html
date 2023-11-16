@@ -26,7 +26,7 @@
     <header>
       <div id="header-wrap">
         <article id="header-logo-box">
-          <h1><a href="#">Logo</a></h1>
+          <h1><a href="./index.html">Logo</a></h1>
           <!-- 로그인 상태가 아닌 경우 -->
           <div>
             <a href="#" id="login-btn">LOGIN</a>
@@ -35,8 +35,8 @@
         </article>
         <article id="nav">
           <nav>
-            <a href="#">HOME</a>
-            <a href="#">ADD</a>
+            <a href="./index.html">HOME</a>
+            <a href="/layout/postInsert.html">ADD</a>
             <a href="#">INFO</a>
           </nav>
         </article>
@@ -46,61 +46,61 @@
     <section id="main">
       <div id="main-wrap" class="flex">
 
-        <!-- side 메뉴 -->
-        <aside>
-          <!-- 로그인 상태인 경우 사용자의 프로필 -->
-          <div id="profile">
-            <div>
-              <div id="profile-info" class="flex">
-                <div id="header-profile"></div>
-                <div class="y-auto">
-                  <h4>nickname</h4>
-                  <span>2022.02.06</span>
-                </div>
+       <!-- side 메뉴 -->
+       <aside>
+        <!-- 로그인 상태인 경우 사용자의 프로필 -->
+        <div id="profile">
+          <div>
+            <div id="profile-info" class="flex">
+              <div class="header-profile"></div>
+              <div>
+                <h4>nickname</h4>
+                <span>2022.02.06</span>
               </div>
             </div>
-            <div>
-              <li class="profile-card flex between">
-                <span class="profile-title">방문</span>
-                <span class="profile-content">10회</span>
-              </li>
-              <li class="profile-card flex between">
-                <span class="profile-title">내가쓴 게시글</span>
-                <span class="profile-content">3개</span>
-              </li>
-              <li class="profile-card flex between">
-                <span class="profile-title">내가 쓴 댓글</span>
-                <span class="profile-content">82개</span>
-              </li>
-            </div>
           </div>
+          <div>
+            <li class="profile-card flex between color-666">
+              <span class="profile-title font-size-s">방문</span>
+              <span class="profile-content font-size-s">10회</span>
+            </li>
+            <li class="profile-card flex between color-666">
+              <span class="profile-title font-size-s">내가쓴 게시글</span>
+              <a href="#" class="profile-content font-size-s hover-underline color-666">3개</a>
+            </li>
+            <li class="profile-card flex between color-666">
+              <span class="profile-title font-size-s">내가 쓴 댓글</span>
+              <a href="#" class="profile-content font-size-s hover-underline color-666">82개</a>
+            </li>
+          </div>
+        </div>
 
-          <div class="card">
-            <span class="aside-title bold block">Category1</span>
-            <li class="aside-content">
-              <a href="#">sub-category</a>
-            </li>
-            <li class="aside-content">
-              <a href="#">sub-category</a>
-            </li>
-            <li class="aside-content">
-              <a href="#">sub-category</a>
-            </li>
-          </div>
-          <div class="card">
-            <span class="aside-title bold block">Category2</span>
-            <li class="aside-content">
-              <a href="#">sub-category</a>
-            </li>
-            <li class="aside-content">
-              <a href="#">sub-category</a>
-            </li>
-            <li class="aside-content">
-              <a href="#">sub-category</a>
-            </li>
+        <div class="card">
+          <span class="aside-title bold block">Category1</span>
+          <li class="aside-content">
+            <a href="./post.html">sub-category</a>
+          </li>
+          <li class="aside-content">
+            <a href="./post.html">sub-category</a>
+          </li>
+          <li class="aside-content">
+            <a href="./post.html">sub-category</a>
+          </li>
+        </div>
+        <div class="card">
+          <span class="aside-title bold block">Category2</span>
+          <li class="aside-content">
+            <a href="./post.html">sub-category</a>
+          </li>
+          <li class="aside-content">
+            <a href="./post.html">sub-category</a>
+          </li>
+          <li class="aside-content">
+            <a href="./post.html">sub-category</a>
+          </li>
 
-          </div>
-        </aside>
+        </div>
+      </aside>
 
 
         <!-- 게시글 화면 -->
@@ -114,64 +114,31 @@
             <!-- 하나의 포스트 영역 -->
             <div class="post-box">
               <div class="post-box-title flex between">
-                <h4><a href="#">카테고리명</a></h4>
-                <a href="#">더보기</a>
+                <h4>카테고리명</h4>
+                <a href="post.html" class="font-size-s color-666">
+                  더보기
+                  <i class="fa-solid fa-angle-right font-size-s"></i>
+                </a>
               </div>
               <!-- 게시글을 감싸는 부모 클레스  -->
               <div class="post-box-wrap flex">
                 <!-- 하나의 게시글 -->
-                <a href="#" class="post-box-content">
+                <a href="./postDetail.html" class="post-box-content color-bk">
                   <div class="post-box-content-img"></div>
                   <span class="post-box-content-title block bold">TITLE</span>
-                  <span class="post-box-content-content block">nickname</span>
+                  <span class="post-box-content-content block ">nickname</span>
                   <div class="post-box-content-ohter flex">
-                    <span class="post-box-content-date">15:31</span>
-                    <span class="post-box-content-hit">조회 30</span>
+                    <span class="post-box-content-date color-666 font-size-s">15:31</span>
+                    <span class="post-box-content-hit color-666 font-size-s ">조회 30</span>
                   </div>
                 </a>
-                <a href="#" class="div post-box-content">
+                <a href="./postDetail.html" class="post-box-content color-bk">
                   <div class="post-box-content-img"></div>
                   <span class="post-box-content-title block bold">TITLE</span>
-                  <span class="post-box-content-content block">nickname</span>
-                  <div class="post-box-content-ohter">
-                    <span class="post-box-content-date">15:31</span>
-                    <span class="post-box-content-hit">조회 30</span>
-                  </div>
-                </a>
-                <a href="#" class="div post-box-content">
-                  <div class="post-box-content-img"></div>
-                  <span class="post-box-content-title block bold">TITLE</span>
-                  <span class="post-box-content-content block">nickname</span>
-                  <div class="post-box-content-ohter">
-                    <span class="post-box-content-date">15:31</span>
-                    <span class="post-box-content-hit">조회 30</span>
-                  </div>
-                </a>
-                <a href="#" class="post-box-content">
-                  <div class="post-box-content-img"></div>
-                  <span class="post-box-content-title block bold">TITLE</span>
-                  <span class="post-box-content-content block">nickname</span>
-                  <div class="post-box-content-ohter">
-                    <span class="post-box-content-date">15:31</span>
-                    <span class="post-box-content-hit">조회 30</span>
-                  </div>
-                </a>
-                <a href="#" class="div post-box-content">
-                  <div class="post-box-content-img"></div>
-                  <span class="post-box-content-title block bold">TITLE</span>
-                  <span class="post-box-content-content block">nickname</span>
-                  <div class="post-box-content-ohter">
-                    <span class="post-box-content-date">15:31</span>
-                    <span class="post-box-content-hit">조회 30</span>
-                  </div>
-                </a>
-                <a href="#" class="div post-box-content">
-                  <div class="post-box-content-img"></div>
-                  <span class="post-box-content-title block bold">TITLE</span>
-                  <span class="post-box-content-content block">nickname</span>
-                  <div class="post-box-content-ohter">
-                    <span class="post-box-content-date">15:31</span>
-                    <span class="post-box-content-hit">조회 30</span>
+                  <span class="post-box-content-content block ">nickname</span>
+                  <div class="post-box-content-ohter flex">
+                    <span class="post-box-content-date color-666 font-size-s">15:31</span>
+                    <span class="post-box-content-hit color-666 font-size-s">조회 30</span>
                   </div>
                 </a>
               </div>
@@ -180,64 +147,49 @@
             <!-- 하나의 포스트 영역 -->
             <div class="post-box">
               <div class="post-box-title flex between">
-                <h4><a href="#">카테고리명</a></h4>
-                <a href="#">더보기</a>
+                <h4>카테고리명</h4>
+                <a href="./post.html" class="font-size-s color-666">
+                  더보기
+                  <i class="fa-solid fa-angle-right font-size-s"></i>
+                </a>
               </div>
               <!-- 게시글을 감싸는 부모 클레스  -->
               <div class="post-box-wrap flex">
                 <!-- 하나의 게시글 -->
-                <a href="#" class="post-box-content">
+                <a href="./postDetail.html" class="post-box-content color-bk">
                   <div class="post-box-content-img"></div>
                   <span class="post-box-content-title block bold">TITLE</span>
-                  <span class="post-box-content-content block">nickname</span>
+                  <span class="post-box-content-content block ">nickname</span>
                   <div class="post-box-content-ohter flex">
-                    <span class="post-box-content-date">15:31</span>
-                    <span class="post-box-content-hit">조회 30</span>
+                    <span class="post-box-content-date color-666 font-size-s">15:31</span>
+                    <span class="post-box-content-hit color-666 font-size-s">조회 30</span>
                   </div>
                 </a>
-                <a href="#" class="div post-box-content">
+                <a href="./postDetail.html" class="post-box-content color-bk">
                   <div class="post-box-content-img"></div>
                   <span class="post-box-content-title block bold">TITLE</span>
-                  <span class="post-box-content-content block">nickname</span>
-                  <div class="post-box-content-ohter">
-                    <span class="post-box-content-date">15:31</span>
-                    <span class="post-box-content-hit">조회 30</span>
+                  <span class="post-box-content-content block ">nickname</span>
+                  <div class="post-box-content-ohter flex">
+                    <span class="post-box-content-date color-666 font-size-s">15:31</span>
+                    <span class="post-box-content-hit color-666 font-size-s">조회 30</span>
                   </div>
                 </a>
-                <a href="#" class="div post-box-content">
+                <a href="./postDetail.html" class="post-box-content color-bk">
                   <div class="post-box-content-img"></div>
                   <span class="post-box-content-title block bold">TITLE</span>
-                  <span class="post-box-content-content block">nickname</span>
-                  <div class="post-box-content-ohter">
-                    <span class="post-box-content-date">15:31</span>
-                    <span class="post-box-content-hit">조회 30</span>
+                  <span class="post-box-content-content block ">nickname</span>
+                  <div class="post-box-content-ohter flex">
+                    <span class="post-box-content-date color-666 font-size-s">15:31</span>
+                    <span class="post-box-content-hit color-666 font-size-s">조회 30</span>
                   </div>
                 </a>
-                <a href="#" class="post-box-content">
+                <a href="./postDetail.html" class="post-box-content color-bk">
                   <div class="post-box-content-img"></div>
                   <span class="post-box-content-title block bold">TITLE</span>
-                  <span class="post-box-content-content block">nickname</span>
-                  <div class="post-box-content-ohter">
-                    <span class="post-box-content-date">15:31</span>
-                    <span class="post-box-content-hit">조회 30</span>
-                  </div>
-                </a>
-                <a href="#" class="div post-box-content">
-                  <div class="post-box-content-img"></div>
-                  <span class="post-box-content-title block bold">TITLE</span>
-                  <span class="post-box-content-content block">nickname</span>
-                  <div class="post-box-content-ohter">
-                    <span class="post-box-content-date">15:31</span>
-                    <span class="post-box-content-hit">조회 30</span>
-                  </div>
-                </a>
-                <a href="#" class="div post-box-content">
-                  <div class="post-box-content-img"></div>
-                  <span class="post-box-content-title block bold">TITLE</span>
-                  <span class="post-box-content-content block">nickname</span>
-                  <div class="post-box-content-ohter">
-                    <span class="post-box-content-date">15:31</span>
-                    <span class="post-box-content-hit">조회 30</span>
+                  <span class="post-box-content-content block ">nickname</span>
+                  <div class="post-box-content-ohter flex">
+                    <span class="post-box-content-date color-666 font-size-s">15:31</span>
+                    <span class="post-box-content-hit color-666 font-size-s">조회 30</span>
                   </div>
                 </a>
               </div>
@@ -246,45 +198,36 @@
             <!-- 게시판 형식 -->
             <div class="post-box">
               <div class="post-box-title flex between">
-                <h4><a href="#">카테고리명</a></h4>
-                <a href="#">더보기</a>
+                <h4>카테고리명</h4>
+                <a href="./post.html" class="font-size-s color-666">
+                  더보기
+                  <i class="fa-solid fa-angle-right font-size-s"></i>
+                </a>
               </div>
               <div class="post-box-wrap">
                 <!-- 하나의 게시글 -->
                 <li class="post-list">
-                  <a href="#" class="flex between">
-                    <span class="post-list-title block">content</span>
-                    <span>nickname</span>
+                  <a href="./postDetail.html" class="flex between">
+                    <span class="post-list-title block color-bk bold">content</span>
+                    <span class="color-666 font-size-s">nickname</span>
                   </a>
                 </li>
                 <li class="post-list">
-                  <a href="#" class="flex between">
-                    <span class="post-list-title block">content</span>
-                    <span>nickname</span>
+                  <a href="./postDetail.html" class="flex between">
+                    <span class="post-list-title block color-bk bold">content</span>
+                    <span class="color-666 font-size-s">nickname</span>
                   </a>
                 </li>
                 <li class="post-list">
-                  <a href="#" class="flex between">
-                    <span class="post-list-title block">content</span>
-                    <span>nickname</span>
+                  <a href="./postDetail.html" class="flex between">
+                    <span class="post-list-title block color-bk bold">content</span>
+                    <span class="color-666 font-size-s">nickname</span>
                   </a>
                 </li>
                 <li class="post-list">
-                  <a href="#" class="flex between">
-                    <span class="post-list-title block">content</span>
-                    <span>nickname</span>
-                  </a>
-                </li>
-                <li class="post-list">
-                  <a href="#" class="flex between">
-                    <span class="post-list-title block">content</span>
-                    <span>nickname</span>
-                  </a>
-                </li>
-                <li class="post-list">
-                  <a href="#" class="flex between">
-                    <span class="post-list-title block">content</span>
-                    <span>nickname</span>
+                  <a href="./postDetail.html" class="flex between">
+                    <span class="post-list-title block color-bk bold">content</span>
+                    <span class="color-666 font-size-s">nickname</span>
                   </a>
                 </li>
               </div>

@@ -17,70 +17,7 @@
   <link rel="stylesheet" href="/style/ohter.css">
   <link rel="stylesheet" href="/style/header.css">
   <link rel="stylesheet" href="/style/aside.css">
-  <style>
-    form {
-      border-top: 1px solid #000;
-      padding-top: 2rem;
-    }
-    select,
-    input,
-    textarea,
-    button {
-      padding: 0.5rem 1rem;
-      outline: none;
-    }
-
-    #post-category {
-      width: 65%;
-      margin-right: 5%;
-    }
-
-    #post-header {
-      width: 30%;
-    }
-
-    #post-title {
-      width: 100%;
-      margin: 1rem 0;
-    }
-
-    #post-contents {
-      width: 100%;
-      margin: 1rem 0;
-      resize: none;
-    }
-
-    #warnning,
-    #submit-box {
-      padding: 1rem;
-    }
-
-    #submit-box>div * {
-      margin: 0;
-      cursor: pointer;
-    }
-
-    #submit-box>div input {
-      margin-right: 0.4rem;
-    }
-    #submit-box>div label {
-      margin-right: 1rem;
-    }
-
-    #submit-btn {
-      padding: .5rem 2rem;;
-      background-color: #c1f3d7;
-      border: 2px solid #c1f3d7;
-      border-radius: 5px;
-      color: #03c75a;
-    }
-    html {
-      font-size: 10px !important;
-    }
-    a {
-      text-decoration: none !important;
-    }
-  </style>
+  <link rel="stylesheet" href="/style/postInsert.css">
 </head>
 
 <body>
@@ -90,7 +27,7 @@
     <header>
       <div id="header-wrap">
         <article id="header-logo-box">
-          <h1><a href="#">Logo</a></h1>
+          <h1><a href="./index.html">Logo</a></h1>
           <!-- 로그인 상태가 아닌 경우 -->
           <div>
             <a href="#" id="login-btn">LOGIN</a>
@@ -99,8 +36,8 @@
         </article>
         <article id="nav">
           <nav>
-            <a href="#">HOME</a>
-            <a href="#">ADD</a>
+            <a href="./index.html">HOME</a>
+            <a href="./postInsert.html">ADD</a>
             <a href="#">INFO</a>
           </nav>
         </article>
@@ -116,25 +53,25 @@
           <div id="profile">
             <div>
               <div id="profile-info" class="flex">
-                <div id="header-profile"></div>
-                <div class="y-auto">
+                <div class="header-profile"></div>
+                <div>
                   <h4>nickname</h4>
                   <span>2022.02.06</span>
                 </div>
               </div>
             </div>
             <div>
-              <li class="profile-card flex between">
-                <span class="profile-title">방문</span>
-                <span class="profile-content">10회</span>
+              <li class="profile-card flex between color-666">
+                <span class="profile-title font-size-s">방문</span>
+                <span class="profile-content font-size-s">10회</span>
               </li>
-              <li class="profile-card flex between">
-                <span class="profile-title">내가쓴 게시글</span>
-                <span class="profile-content">3개</span>
+              <li class="profile-card flex between color-666">
+                <span class="profile-title font-size-s">내가쓴 게시글</span>
+                <a href="#" class="profile-content font-size-s hover-underline color-666">3개</a>
               </li>
-              <li class="profile-card flex between">
-                <span class="profile-title">내가 쓴 댓글</span>
-                <span class="profile-content">82개</span>
+              <li class="profile-card flex between color-666">
+                <span class="profile-title font-size-s">내가 쓴 댓글</span>
+                <a href="#" class="profile-content font-size-s hover-underline color-666">82개</a>
               </li>
             </div>
           </div>
@@ -142,33 +79,32 @@
           <div class="card">
             <span class="aside-title bold block">Category1</span>
             <li class="aside-content">
-              <a href="#">sub-category</a>
+              <a href="./post.html">sub-category</a>
             </li>
             <li class="aside-content">
-              <a href="#">sub-category</a>
+              <a href="./post.html">sub-category</a>
             </li>
             <li class="aside-content">
-              <a href="#">sub-category</a>
+              <a href="./post.html">sub-category</a>
             </li>
           </div>
           <div class="card">
             <span class="aside-title bold block">Category2</span>
             <li class="aside-content">
-              <a href="#">sub-category</a>
+              <a href="./post.html">sub-category</a>
             </li>
             <li class="aside-content">
-              <a href="#">sub-category</a>
+              <a href="./post.html">sub-category</a>
             </li>
             <li class="aside-content">
-              <a href="#">sub-category</a>
+              <a href="./post.html">sub-category</a>
             </li>
-
           </div>
         </aside>
 
         <!-- 글쓰기 폼 -->
         <section class="post-section">
-          <h3 class="page-title bold">글쓰기</h3>
+          <h3 class="font-size-l margin-y-s">글쓰기</h3>
           <form action="">
             <div class="flex">
               <select name="category" id="post-category" class="pointer border-ccc">
@@ -206,8 +142,10 @@
             </div>
           </form>
         </section>
-
       </div>
+    </section>
+
+  </div>
 </body>
 
 </html>

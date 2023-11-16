@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style/ohter.css">
+  <link rel="stylesheet" href="/style/header.css">
+  <link rel="stylesheet" href="/style/aside.css">
+  <link rel="stylesheet" href="/style/index.css">
+  <script src="https://kit.fontawesome.com/08a7424104.js" crossorigin="anonymous"></script>
+  <style>
+    #post-category {
+      color: #03c75a;
+    }
+    .post-section {
+      border-radius: 10px;
+    }
+    .post-comments:last-child {
+      border: none;
+    }
+    textarea {
+      border: none;
+    }
+    #add-comments {
+      border: none;
+      padding: 0.5rem 2rem;
+      background-color: #c1f3d7;
+      border-radius: 5px;
+      color: #03c75a;
+      margin-left: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- header -->
+    <header>
+      <div id="header-wrap">
+        <article id="header-logo-box">
+          <h1><a href="./index.html">Logo</a></h1>
+          <!-- 로그인 상태가 아닌 경우 -->
+          <div>
+            <a href="#" id="login-btn">LOGIN</a>
+            <a href="#" id="join-btn">JOIN</a>
+          </div>
+        </article>
+        <article id="nav">
+          <nav>
+            <a href="./index.html">HOME</a>
+            <a href="./postInsert.html">ADD</a>
+            <a href="#">INFO</a>
+          </nav>
+        </article>
+      </div>
+    </header>
+
+    <section id="main">
+      <div id="main-wrap" class="flex">
+
+        <!-- side 메뉴 -->
+        <aside>
+          <!-- 로그인 상태인 경우 사용자의 프로필 -->
+          <div id="profile">
+            <div>
+              <div id="profile-info" class="flex">
+                <div class="header-profile"></div>
+                <div>
+                  <h4>nickname</h4>
+                  <span>2022.02.06</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <li class="profile-card flex between color-666">
+                <span class="profile-title font-size-s">방문</span>
+                <span class="profile-content font-size-s">10회</span>
+              </li>
+              <li class="profile-card flex between color-666">
+                <span class="profile-title font-size-s">내가쓴 게시글</span>
+                <a href="#" class="profile-content font-size-s hover-underline color-666">3개</a>
+              </li>
+              <li class="profile-card flex between color-666">
+                <span class="profile-title font-size-s">내가 쓴 댓글</span>
+                <a href="#" class="profile-content font-size-s hover-underline color-666">82개</a>
+              </li>
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="aside-title bold block">Category1</span>
+            <li class="aside-content">
+              <a href="./post.html">sub-category</a>
+            </li>
+            <li class="aside-content">
+              <a href="./post.html">sub-category</a>
+            </li>
+            <li class="aside-content">
+              <a href="./post.html">sub-category</a>
+            </li>
+          </div>
+          <div class="card">
+            <span class="aside-title bold block">Category2</span>
+            <li class="aside-content">
+              <a href="./post.html">sub-category</a>
+            </li>
+            <li class="aside-content">
+              <a href="./post.html">sub-category</a>
+            </li>
+            <li class="aside-content">
+              <a href="./post.html">sub-category</a>
+            </li>
+
+          </div>
+        </aside>
+
+        <!-- 게시글 상세 화면 -->
+        <section class="post-section border-ccc padding-all-s margin-top-s">
+          <article>
+            <a href="./post.html" id="post-category" class="font-size-s">
+              카테고리명
+              <i class="fa-solid fa-angle-right font-size-s"></i>
+            </a>
+            <h3 class="margin-y-s bold font-size-l">게시글 타이틀</h3>
+            <div class="flex between align-center border-bottom-ccc padding-bottom-s">
+              <div class="flex align-center">
+                <!-- 프로필 이미지 -->
+                <div class="header-profile"></div>
+                <div>
+                  <span id="display-name" class="bold">nickname</span>
+                  <span id="grage">등급</span>
+                  <div>
+                    <span class="font-size-s color-grey">2023.11.05</span>
+                    <span class="font-size-s color-grey">조회 30</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex align-center"> 
+                <span>
+                  <i class="fa-sharp fa-solid fa-comment-dots fa-flip-horizontal"></i>
+                  댓글 
+                  <span class="bold">2</span>
+                </span>
+                <span class="block margin-x-s pointer">URL 복사</span>
+                <!-- 포스트 작성자와 현재 세션의 저장된 사용자가 동일한 경우 버튼 활성화 -->
+                <div class="pointer">
+                  <i class="fa-solid fa-ellipsis-vertical color-grey"></i>
+                  <a class="none">수정</a>
+                  <a class="none">삭제</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="post-contents-wrap" class="padding-top-s">
+            <!-- 게시글 내용 -->
+            <div id="post-contents">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rerum officia iure nisi, distinctio, dolores doloribus, inventore consequatur asperiores reprehenderit cumque provident ipsa alias quod? Asperiores totam tempore dolores sint.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rerum officia iure nisi, distinctio, dolores doloribus, inventore consequatur asperiores reprehenderit cumque provident ipsa alias quod? Asperiores totam tempore dolores sint.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rerum officia iure nisi, distinctio, dolores doloribus, inventore consequatur asperiores reprehenderit cumque provident ipsa alias quod? Asperiores totam tempore dolores sint.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rerum officia iure nisi, distinctio, dolores doloribus, inventore consequatur asperiores reprehenderit cumque provident ipsa alias quod? Asperiores totam tempore dolores sint.
+            </div>
+            <!-- 좋아요 및 댓글 ajax로 요청 -->
+            <div class="flex padding-bottom-s margin-top-l border-bottom-ccc">
+              <div class="pointer">
+                <i class="fa-sharp fa-regular fa-heart color-red"></i>
+                <!-- <i class="fa-sharp fa-solid fa-heart color-red"></i> -->
+                좋아요
+                <span class="bold">3</span>
+              </div>
+              <div class="margin-x-s">
+                <i class="fa-sharp fa-solid fa-comment-dots fa-flip-horizontal"></i>
+                댓글
+                <span class="bold">2</span>
+              </div>
+            </div>
+            <article>
+              <div class="flex align-top padding-y-s">
+                <h3 class="bold font-size-m">댓글</h3>
+                <!-- ajax를 통해 요청 font-color는 classList로 제어 -->
+                <span class="pointer block margin-x-s bold">등록순</span>
+                <span class="pointer bold color-grey">최신순</span>
+              </div>
+              <!-- 댓글 리스트 -->
+              <div class="padding-x-s">
+                <li class="padding-y-s border-bottom-ccc post-comments">
+                  <div class="flex align-center">
+                    <!-- 프로필 이미지 -->
+                    <div class="header-profile"></div>
+                    <div>
+                      <span id="display-name" class="bold">nickname</span>
+                      <span id="grage">등급</span>
+                      <div>
+                        <p class="margin-y-s">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolorem, repudiandae quis suscipit enim voluptate nam reprehenderit. Harum quam veritatis, ut expedita labore neque non, hic ratione, iusto corrupti quidem?</p>
+                        <span class="font-size-s color-grey">2023.11.05</span>
+                      </div>
+                    </div>
+                </li>
+                <li class="padding-y-s border-bottom-ccc post-comments">
+                  <div class="flex align-center">
+                    <!-- 프로필 이미지 -->
+                    <div class="header-profile"></div>
+                    <div>
+                      <span id="display-name" class="bold">nickname</span>
+                      <span id="grage">등급</span>
+                      <div>
+                        <p class="margin-y-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptatem eius pariatur voluptatum praesentium quisquam omnis voluptates labore, nihil voluptate id incidunt minus, qui quae nesciunt! Reiciendis exercitationem voluptatibus deleniti!</p>
+                        <span class="font-size-s color-grey">2023.11.05</span>
+                      </div>
+                    </div>
+                </li>
+              </div>
+            </article>
+          </article>
+          <article>
+            <form action="/name?${nickname}" class="border-ccc">
+              <textarea name="comments" id="comments" class="full-width" rows="5"></textarea>
+              <button id="add-comments" class="pointer block margin-all-s bold">등록</button>
+            </form>
+          </article>
+        </section>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
