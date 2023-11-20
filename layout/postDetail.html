@@ -14,15 +14,19 @@
     #post-category {
       color: #03c75a;
     }
+
     .post-section {
       border-radius: 10px;
     }
+
     .post-comments:last-child {
       border: none;
     }
+
     textarea {
       border: none;
     }
+
     #add-comments {
       border: none;
       padding: 0.5rem 2rem;
@@ -44,8 +48,8 @@
           <h1><a href="./index.html">Logo</a></h1>
           <!-- 로그인 상태가 아닌 경우 -->
           <div>
-            <a href="./login.html?login" id="login-btn">LOGIN</a>
-            <a href="./login.html?join" id="join-btn">JOIN</a>
+            <a href="./login.html" id="login-btn">LOGIN</a>
+            <a href="./login.html" id="join-btn">JOIN</a>
           </div>
         </article>
         <article id="nav">
@@ -70,7 +74,7 @@
                 <div class="header-profile"></div>
                 <div>
                   <h4>nickname</h4>
-                  <span>2022.02.06</span>
+                  <span class="font-size-s">2022.02.06</span>
                 </div>
               </div>
             </div>
@@ -81,11 +85,11 @@
               </li>
               <li class="profile-card flex between color-666">
                 <span class="profile-title font-size-s">내가쓴 게시글</span>
-                <a href="#" class="profile-content font-size-s hover-underline color-666">3개</a>
+                <a href="./memberView.html" class="profile-content font-size-s hover-underline color-666">3개</a>
               </li>
               <li class="profile-card flex between color-666">
                 <span class="profile-title font-size-s">내가 쓴 댓글</span>
-                <a href="#" class="profile-content font-size-s hover-underline color-666">82개</a>
+                <a href="./memberView.html" class="profile-content font-size-s hover-underline color-666">82개</a>
               </li>
             </div>
           </div>
@@ -117,6 +121,7 @@
           </div>
         </aside>
 
+
         <!-- 게시글 상세 화면 -->
         <section class="post-section border-ccc padding-all-s margin-top-s">
           <article>
@@ -138,10 +143,10 @@
                   </div>
                 </div>
               </div>
-              <div class="flex align-center"> 
+              <div class="flex align-center">
                 <span>
                   <i class="fa-sharp fa-solid fa-comment-dots fa-flip-horizontal"></i>
-                  댓글 
+                  댓글
                   <span class="bold">2</span>
                 </span>
                 <span class="block margin-x-s pointer">URL 복사</span>
@@ -158,10 +163,18 @@
           <article id="post-contents-wrap" class="padding-top-s">
             <!-- 게시글 내용 -->
             <div id="post-contents">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rerum officia iure nisi, distinctio, dolores doloribus, inventore consequatur asperiores reprehenderit cumque provident ipsa alias quod? Asperiores totam tempore dolores sint.
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rerum officia iure nisi, distinctio, dolores doloribus, inventore consequatur asperiores reprehenderit cumque provident ipsa alias quod? Asperiores totam tempore dolores sint.
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rerum officia iure nisi, distinctio, dolores doloribus, inventore consequatur asperiores reprehenderit cumque provident ipsa alias quod? Asperiores totam tempore dolores sint.
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rerum officia iure nisi, distinctio, dolores doloribus, inventore consequatur asperiores reprehenderit cumque provident ipsa alias quod? Asperiores totam tempore dolores sint.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rerum officia iure nisi, distinctio,
+              dolores doloribus, inventore consequatur asperiores reprehenderit cumque provident ipsa alias quod?
+              Asperiores totam tempore dolores sint.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rerum officia iure nisi, distinctio,
+              dolores doloribus, inventore consequatur asperiores reprehenderit cumque provident ipsa alias quod?
+              Asperiores totam tempore dolores sint.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rerum officia iure nisi, distinctio,
+              dolores doloribus, inventore consequatur asperiores reprehenderit cumque provident ipsa alias quod?
+              Asperiores totam tempore dolores sint.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rerum officia iure nisi, distinctio,
+              dolores doloribus, inventore consequatur asperiores reprehenderit cumque provident ipsa alias quod?
+              Asperiores totam tempore dolores sint.
             </div>
             <!-- 좋아요 및 댓글 ajax로 요청 -->
             <div class="flex padding-bottom-s margin-top-l border-bottom-ccc">
@@ -194,7 +207,9 @@
                       <span id="display-name" class="bold">nickname</span>
                       <span id="grage">등급</span>
                       <div>
-                        <p class="margin-y-s">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolorem, repudiandae quis suscipit enim voluptate nam reprehenderit. Harum quam veritatis, ut expedita labore neque non, hic ratione, iusto corrupti quidem?</p>
+                        <p class="margin-y-s">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+                          dolorem, repudiandae quis suscipit enim voluptate nam reprehenderit. Harum quam veritatis, ut
+                          expedita labore neque non, hic ratione, iusto corrupti quidem?</p>
                         <span class="font-size-s color-grey">2023.11.05</span>
                       </div>
                     </div>
@@ -207,7 +222,10 @@
                       <span id="display-name" class="bold">nickname</span>
                       <span id="grage">등급</span>
                       <div>
-                        <p class="margin-y-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptatem eius pariatur voluptatum praesentium quisquam omnis voluptates labore, nihil voluptate id incidunt minus, qui quae nesciunt! Reiciendis exercitationem voluptatibus deleniti!</p>
+                        <p class="margin-y-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+                          voluptatem eius pariatur voluptatum praesentium quisquam omnis voluptates labore, nihil
+                          voluptate id incidunt minus, qui quae nesciunt! Reiciendis exercitationem voluptatibus
+                          deleniti!</p>
                         <span class="font-size-s color-grey">2023.11.05</span>
                       </div>
                     </div>

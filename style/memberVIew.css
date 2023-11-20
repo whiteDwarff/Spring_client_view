@@ -1,0 +1,6 @@
+.current-option {
+  text-decoration: underline;
+  text-decoration-color: #03c75a;
+  text-underline-position : under;
+  text-decoration-thickness: 2px;
+}

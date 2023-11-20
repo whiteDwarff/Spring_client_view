@@ -8,8 +8,20 @@
   <link rel="stylesheet" href="/style/ohter.css">
   <link rel="stylesheet" href="/style/header.css">
   <link rel="stylesheet" href="/style/aside.css">
-  <link rel="stylesheet" href="/style/post.css">
   <script src="https://kit.fontawesome.com/08a7424104.js" crossorigin="anonymous"></script>
+  
+  <style>
+    #member-info-form {
+      width: 100%;
+      margin-right: 10%;
+    }
+    #member-info-form article:first-child {
+      width: 70%;
+    }
+    #member-info-form input {
+      width: 80%;
+    }
+  </style>
 </head>
 
 <body>
@@ -94,68 +106,37 @@
 
           </div>
         </aside>
-        
-        <!-- 게시글 화면 -->
-        <section class="post-section">
-          <article id="post-content">
-            <h3 class="font-size-l margin-y-s">Category Name</h3>
-            <table class="text-center font-size">
-              <thead>
-                <tr>
-                  <th class="post-title text-">제목</th>
-                  <th class="post-writer">작성자</th>
-                  <th class="post-date">작성일</th>
-                  <th class="post-hit">조회</th>
-                  <th class="post-like">좋아요</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- 공지사항인 경우 post-notice, post-notice-title 클래스 추가 -->
-                <tr class="post-notice">
-                  <td class="text-left">
-                    <a href="./postDetail.html" class="post-title post-notice-title bold">
-                      <span class="post-count inline-bolok text-center">[공지]</span>
-                      <span>11월, 다시 없을 역대급 블프가 온다!!</span>
-                      <span>[142]</span>
-                    </a>
-                  </td>
-                  <td class="post-writer">관리자</td>
-                  <td class="post-date">2022.11.14</td>
-                  <td class="post-hit">3,520</td>
-                  <td class="post-like">32</td>
-                </tr>
-                <!-- 일반 게시물 -->
-                <tr>
-                  <td class="text-left">
-                    <a href="./postDetail.html" class="post-title color-666">
-                      <span class="post-count inline-bolok text-center">1</span>
-                      <span>역대급 머리 손질법</span>
-                      <span class="color-red">[2]</span>
-                    </a>
-                  </td>
-                  <td class="post-writer">
-                    <a href="./memberView.html" class="color-666">강문호</a>
-                  </td>
-                  <td class="post-date">2022.11.16</td>
-                  <td class="post-hit">3</td>
-                  <td class="post-like">1</td>
-                </tr>
-              </tbody>
-            </table>
-          </article>
 
-          <article id="post-seach" class="text-center">
-            <!-- 카테고리 내용 검색 폼  -->
-            <form action="" id="post-search-form" class="">
-              <select name="" id="select-box block" class="pointer">
-                <option value="post">게시글</option>
-                <option value="comment">댓글</option>
-                <option value="writer">작성자</option>
-              </select>
-              <input type="text" id="post-search-content" placeholder="내용을 입력해주세요.">
-              <button id="post-search-btn" class="pointer color-fff">검색</button>
+        <!-- 사용자 정보 view  -->
+        <section class="post-section">
+          <div id="member-info-wrap">
+            <form id="member-info-form" class="flex" action="">
+              <article>
+                <div class="input-wrap margin-y-m">
+                  <label for="name" class="block margin-bottom-s">Name</label>
+                  <input id="name" value="강문호" disabled />
+                </div>
+                <div class="input-wrap margin-y-m">
+                  <label for="email" class="block margin-bottom-s">Email</label>
+                  <input id="email" type="email" value="rkdans113@naver.com" disabled />
+                </div>
+                <div class="input-wrap  margin-y-m">
+                  <label for="password" class="block margin-bottom-s">Password</label>
+                  <input id="password" type="password"/>
+                </div>
+                <div class="input-wrap  margin-y-m">
+                  <label for="password-chk" class="block margin-bottom-s">Confirm password</label>
+                  <input id="password-chk" type="password"/>
+                </div>
+              </article>
+
+              <article>
+                <label for="">Profile</label>
+
+                <input type="text">
+              </article>
             </form>
-          </article>
+          </div>
         </section>
 
       </div>

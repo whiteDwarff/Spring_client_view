@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/style/ohter.css">
   <link rel="stylesheet" href="/style/header.css">
   <link rel="stylesheet" href="/style/aside.css">
-  <link rel="stylesheet" href="/style/post.css">
+  <link rel="stylesheet" href="/style/memberView.css">
   <script src="https://kit.fontawesome.com/08a7424104.js" crossorigin="anonymous"></script>
 </head>
 
@@ -94,12 +94,55 @@
 
           </div>
         </aside>
-        
+
         <!-- 게시글 화면 -->
         <section class="post-section">
-          <article id="post-content">
-            <h3 class="font-size-l margin-y-s">Category Name</h3>
+          <!--  -->
+          <div id="profile">
+            <div>
+              <div id="profile-info" class="flex">
+                <div class="header-profile"></div>
+                <div>
+                  <h4>nickname</h4>
+                  <span id="grade" class="font-size-s">grade</span>
+                  <span class="font-size-s">작성글 1</span>
+                </div>
+              </div>
+            </div>
+          <div>
+
+          <!-- 다른 회원의 프로필일 경우에만 보임 -->
+          <ul id="post-option" class="flex margin-y-s">
+            <li><a href="#" class="color-green bold current-option">작성글</a></li>
+            <li class="margin-x-s"><a href="#">댓글단 글</a></li>
+          </ul>
+          <div id="table-view">
+            <!-- 작성글을 클릭했을 때 보이는 테이블 default view -->
             <table class="text-center font-size">
+              <thead>
+                <tr>
+                  <th class="post-title">제목</th>
+                  <th class="post-date">작성일</th>
+                  <th class="post-hit">조회</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-left">
+                    <a href="./postDetail.html" class="post-title color-666">
+                      <span class="post-count inline-bolok text-center">1</span>
+                      <span>역대급 머리 손질법</span>
+                      <span class="color-red">[2]</span>
+                    </a>
+                  </td>
+                  <td class="post-date">2022.11.16</td>
+                  <td class="post-hit">3</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- 댓글단 글을 클릭했을 때 보이는 테이블 -->
+            <!-- <table class="text-center font-size">
               <thead>
                 <tr>
                   <th class="post-title text-">제목</th>
@@ -110,7 +153,6 @@
                 </tr>
               </thead>
               <tbody>
-                <!-- 공지사항인 경우 post-notice, post-notice-title 클래스 추가 -->
                 <tr class="post-notice">
                   <td class="text-left">
                     <a href="./postDetail.html" class="post-title post-notice-title bold">
@@ -124,38 +166,22 @@
                   <td class="post-hit">3,520</td>
                   <td class="post-like">32</td>
                 </tr>
-                <!-- 일반 게시물 -->
                 <tr>
                   <td class="text-left">
                     <a href="./postDetail.html" class="post-title color-666">
                       <span class="post-count inline-bolok text-center">1</span>
                       <span>역대급 머리 손질법</span>
-                      <span class="color-red">[2]</span>
+                      <span>[2]</span>
                     </a>
                   </td>
-                  <td class="post-writer">
-                    <a href="./memberView.html" class="color-666">강문호</a>
-                  </td>
+                  <td class="post-writer">강문호</td>
                   <td class="post-date">2022.11.16</td>
                   <td class="post-hit">3</td>
                   <td class="post-like">1</td>
                 </tr>
               </tbody>
-            </table>
-          </article>
-
-          <article id="post-seach" class="text-center">
-            <!-- 카테고리 내용 검색 폼  -->
-            <form action="" id="post-search-form" class="">
-              <select name="" id="select-box block" class="pointer">
-                <option value="post">게시글</option>
-                <option value="comment">댓글</option>
-                <option value="writer">작성자</option>
-              </select>
-              <input type="text" id="post-search-content" placeholder="내용을 입력해주세요.">
-              <button id="post-search-btn" class="pointer color-fff">검색</button>
-            </form>
-          </article>
+            </table> -->      
+        </div>
         </section>
 
       </div>
