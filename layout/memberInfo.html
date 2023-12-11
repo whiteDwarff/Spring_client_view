@@ -13,13 +13,26 @@
   <style>
     #member-info-form {
       width: 100%;
-      margin-right: 10%;
+      border-top: 1px solid #666;
+      /* margin-right: 10%; */
     }
     #member-info-form article:first-child {
       width: 70%;
     }
     #member-info-form input {
       width: 80%;
+    }
+    #profile-wrap {
+      width: 30%;
+    }
+    #profile-wrap {
+      width: 20rem;
+      height: 20rem;
+    }
+    #profile-wrap .header-profile {
+      width: 20rem;
+      height: 20rem;
+      margin-right: 0;
     }
   </style>
 </head>
@@ -42,7 +55,7 @@
           <nav>
             <a href="./index.html">HOME</a>
             <a href="./postInsert.html">ADD</a>
-            <a href="#">INFO</a>
+            <a href="./memberInfo.html">INFO</a>
           </nav>
         </article>
       </div>
@@ -109,6 +122,7 @@
 
         <!-- 사용자 정보 view  -->
         <section class="post-section">
+          <h3 class="font-size-l margin-y-s">개인정보수정</h3>
           <div id="member-info-wrap">
             <form id="member-info-form" class="flex" action="">
               <article>
@@ -130,10 +144,21 @@
                 </div>
               </article>
 
-              <article>
-                <label for="">Profile</label>
-
-                <input type="text">
+              <!-- 프로필 이미지 설정 -->
+              <!-- https://iamiet.tistory.com/68 참고  -->
+              <article id="profile-wrap" class="text-center margin-y-m">
+                <label for="profile-img">Profile</label>
+                <div id="profile">
+                  <div>
+                    <div class="margin-y-m">
+                      <div class="header-profile"></div>
+                    </div>
+                  </div>
+                  <div>
+                  <div>
+                    <!-- 이미지 파일만 업로드 가능하도록 설정 -->
+                    <input type="file" id="profile-img" class="pointer" accept="image/*">
+                  </div>
               </article>
             </form>
           </div>
